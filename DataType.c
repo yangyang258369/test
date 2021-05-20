@@ -1,6 +1,20 @@
 #include "stdio.h"
 #include "string.h"
 
+struct a1
+{
+  int a;
+  char b;
+  short c;
+};
+
+struct a2
+{
+  char a;
+  int b;
+  short c;
+};
+
 int main()
 {
   int a = 5;
@@ -8,8 +22,11 @@ int main()
   float f = 5.3;
   double m = 12.65;
   double result = 0;
+  struct a1 stu_a1;
+  struct a2 stu_a2;
 
   printf(" sizeof(a) = %d, sizeof(c) = %d,sizeof(c) = %d,sizeof(m) = %d\n", sizeof(a), sizeof(c), sizeof(f), sizeof(m));
+  printf(" sizeof(struct a) = %d, sizeof(struct b) = %d\n", stu_a1, stu_a2):
 
   //同类型数据间运算并输出结果
   printf("a + c = %d\n", a+c);//int转char
