@@ -3,7 +3,7 @@
 
 struct a0
 {
-  char a; //1
+  char a;//1
 };
 
 struct a1
@@ -13,12 +13,12 @@ struct a1
 
 struct a2
 {
-  short a;//4
+  short a;//2
 };
 
 struct a3
 {
-  float a;//8
+  float a;//4
 };
 
 struct a4
@@ -35,14 +35,14 @@ struct a5
 
 struct a6
 {
-  char a; //4
+  char a; //此整数倍对齐，则此处为4
   int b;  //4
   short c;//4
 };
 
 struct a7
 {
-  char a; //4
+  char a; //此整数倍对齐，则此处为4
   int b;  //4
   double c;//8
 };
@@ -50,15 +50,15 @@ struct a7
 struct a8
 {
   int a;  //4
-  char b; //4
+  char b; //此整数倍对齐，则此处为4
   int c;  //4
 };
 
 struct a9
 {
   int a;  //4
-  char b; //4
-  double c;  //4
+  char b; //此整数倍对齐，则此处为4
+  double c;  //8
 };
 
 
