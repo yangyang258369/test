@@ -26,7 +26,7 @@ int main()
   struct a2 stu_a2;
 
   printf(" sizeof(a) = %d, sizeof(c) = %d,sizeof(c) = %d,sizeof(m) = %d\n", sizeof(a), sizeof(c), sizeof(f), sizeof(m));
-  printf(" sizeof(struct a) = %d, sizeof(struct b) = %d\n", stu_a1, stu_a2):
+  printf(" sizeof(struct a) = %d, sizeof(struct b) = %d\n", stu_a1, stu_a2);
 
   //同类型数据间运算并输出结果
   printf("a + c = %d\n", a+c);//int转char
