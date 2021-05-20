@@ -54,6 +54,14 @@ struct a8
   int c;  //4
 };
 
+struct a9
+{
+  int a;  //4
+  char b; //4
+  double c;  //4
+};
+
+
 int main()
 {
   int a = 5;
@@ -67,7 +75,7 @@ int main()
   printf(" sizeof(struct a2) = %d, sizeof(struct a3) = %d\n", sizeof(struct a2), sizeof(struct a3) );
   printf(" sizeof(struct a4) = %d, sizeof(struct a5) = %d\n", sizeof(struct a4), sizeof(struct a5) );
   printf(" sizeof(struct a6) = %d, sizeof(struct a7) = %d\n", sizeof(struct a6), sizeof(struct a7) );
-  printf(" sizeof(struct a8) = %d, sizeof(struct a8) = %d\n", sizeof(struct a8), sizeof(struct a8) );
+  printf(" sizeof(struct a8) = %d, sizeof(struct a9) = %d\n", sizeof(struct a8), sizeof(struct a9) );
 
   //同类型数据间运算并输出结果
   printf("a + c = %d\n", a+c);//int转char
