@@ -1,6 +1,8 @@
 #include "stdio.h"
 #include "string.h"
 
+void print_add( int a, int b );
+void print_sub( int a, int b);
 
 int add(int a, int b)
 {
@@ -22,19 +24,9 @@ void func( int a )
   printf("Input of Data = %d\n", a);
 }
 
-void print_add( int a, int b )
-{
-  printf("add = %d\n", a + b);
-}
-
-void print_sub( int a, int b)
-{
-  printf("sub = %d\n", a - b);
-}
-
 int main()
 {
-  unsigned int ch;
+  unsigned int ch, a, b;
   void (*func_ptr)(int) = func;
   void (*use_ptr[])(int,int) = (print_add, print_sub);
 
@@ -45,9 +37,21 @@ int main()
   printf("%d\n", use(add,1,2));
   func_ptr(10);
 
-  (*use_ptr[ch])(1,5);
+  a = 15;
+  b = 10;
+  (*use_ptr[ch])(a,b);
 
   return 0;
 }
 
+
+void print_add( int a, int b )
+{
+  printf("add = %d\n", a + b);
+}
+
+void print_sub( int a, int b)
+{
+  printf("sub = %d\n", a - b);
+}
 
