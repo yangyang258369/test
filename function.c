@@ -24,12 +24,42 @@ void func( int a )
   printf("Input of Data = %d\n", a);
 }
 
+char* func1( char* p)
+{
+  printf("%s\n", p);
+  return p;
+}
+
+char* func2( char* p)
+{
+  printf("%s\n", p);
+  return p;
+}
+
+char* func3( char* p)
+{
+  printf("%s\n", p);
+  return p;
+}
+
 int main()
 {
   void (*func_ptr)(int) = func;
+  char* (*pf[3])(char *p);
 
+  //函数指针赋值
   printf("%d\n", use(add,1,2));
+  //函数指针赋值
   func_ptr(10);
+
+  //函数指针数组
+  pf[0] = func1;
+  pf[1] = &func2;
+  pf[2] = &func3;
+
+  pf[0]("func1");
+  pf[1]("func1");
+  pf[2]("func1");
 
   return 0;
 }
