@@ -70,7 +70,7 @@ int main()
   double m = 12.65;
   double result = 0;
 
-  printf(" sizeof(a) = %d, sizeof(c) = %d,sizeof(c) = %d,sizeof(m) = %d\n", sizeof(a), sizeof(c), sizeof(f), sizeof(m));
+  printf(" sizeof(int) = %d, sizeof(char) = %d, sizeof(float) = %d, sizeof(double) = %d\n", sizeof(a), sizeof(c), sizeof(f), sizeof(m));
   printf(" sizeof(struct a0) = %d, sizeof(struct a1) = %d\n", sizeof(struct a0), sizeof(struct a1) );
   printf(" sizeof(struct a2) = %d, sizeof(struct a3) = %d\n", sizeof(struct a2), sizeof(struct a3) );
   printf(" sizeof(struct a4) = %d, sizeof(struct a5) = %d\n", sizeof(struct a4), sizeof(struct a5) );
@@ -78,7 +78,7 @@ int main()
   printf(" sizeof(struct a8) = %d, sizeof(struct a9) = %d\n", sizeof(struct a8), sizeof(struct a9) );
 
   //同类型数据间运算并输出结果
-  printf("a + c = %d\n", a+c);//int转char
+  printf("a + c = %d\n", a+c);   //int转char
   printf("a + c = %c\n", a+c);
   printf("f + m = %f\n", f+m);
 
