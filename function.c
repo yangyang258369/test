@@ -58,8 +58,8 @@ int main()
   pf[2] = &func3;
 
   pf[0]("func1");
-  pf[1]("func1");
-  pf[2]("func1");
+  pf[1]("func2");
+  pf[2]("func3");
 
   return 0;
 }
