@@ -44,6 +44,21 @@ char* func3( char* p)
 
 int main()
 {
+  char* (*pf[3])(char *p);
+  //函数指针数组
+  pf[0] = func1;
+  pf[1] = &func2;
+  pf[2] = &func3;
+
+  pf[0]("func1");
+  pf[1]("func2");
+  pf[2]("func3");
+
+  return 0;
+}
+
+int main()
+{
   void (*func_ptr)(int) = func;
   char* (*pf[3])(char *p);
 
