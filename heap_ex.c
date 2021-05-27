@@ -18,7 +18,7 @@ int main()
 
   for ( i = 0; i < 20; i++)
   {
-   printf("malloc[%d] = %s\n", i, p[i]);
+   printf("malloc[%d] = %s\n", i, &p[i]);
   }
 
   printf("hello,world!\n");
