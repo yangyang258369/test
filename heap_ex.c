@@ -12,12 +12,12 @@ int main()
   for( i = 0; i < 20; i++ )
   {
     p[i] = i;
-    printf("p[%d] = %d\n", i, p[i]);
+    printf("p[%d] = %ld\n", i, p[i]);
   }
 
   //指针大小
-  printf("int *p -> sizeof(p) = %d\n", sizeof(p));
-  printf("int *n -> sizeof(n) = %d\n", sizeof(n));
+  printf("int *p -> sizeof(p) = %ld\n", sizeof(p));
+  printf("int *n -> sizeof(n) = %ld\n", sizeof(n));
 
   //指针地址
   printf("addr p = 0x%x\n", p);
