@@ -3,7 +3,8 @@
 
 int main()
 {
-  int *p = (int*)malloc(20);      //申请20字节
+  int *p = (int*)malloc(20);                   //申请20字节
+  int *r = (int*)malloc(sizeof(int) * 5);      //申请20字节
   int *n = NULL;
   int i = 0;
 
