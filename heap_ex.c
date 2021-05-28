@@ -12,7 +12,7 @@ int main()
   for( i = 0; i < 20; i++ )
   {
     p[i] = i;
-    printf("p[%d] = %ld\n", i, p[i]);
+    printf("p[%ld] = %ld\n", i, p[i]);
   }
 
   //指针大小
@@ -26,7 +26,7 @@ int main()
   for( i = 0; i < 4; i++ )
   {
     p[i] = i;
-    printf("(%d)%d, %x\n", i, p[i], &p[i]);
+    printf("(%ld)%ld, %x\n", i, p[i], &p[i]);
   }
 
   printf("hello,world!\n");
