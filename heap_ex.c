@@ -31,6 +31,7 @@ int main()
   printf("hello,world!\n");
 
   free(p);
+  free(r);
 
   return 0;
 }
