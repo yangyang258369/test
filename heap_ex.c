@@ -9,10 +9,11 @@ int main()
   int *n = NULL;
   int i = 0;
 
+  //for( i = 0; i < 10; i++ )    //此时数据越界，最大为5，此时为10  释放是会报错误
   for( i = 0; i < 4; i++ )
   {
     p[i] = i;
-    printf("p[%ld] = %ld\n", i, p[i]);
+    printf("p[%d] = %d\n", i, p[i]);
   }
 
   //指针大小
@@ -20,13 +21,13 @@ int main()
   printf("int *n -> sizeof(n) = %ld\n", sizeof(n));
 
   //指针地址
-  printf("addr p = 0x%x\n", p);
+  printf("addr p = %p\n", p);
 
   //缓存指针地址
   for( i = 0; i < 4; i++ )
   {
     p[i] = i;
-    printf("(%ld)%ld, %x\n", i, p[i], &p[i]);
+    printf("(%d)%d, %p\n", i, p[i], &p[i]);
   }
 
   printf("hello,world!\n");
