@@ -9,7 +9,7 @@ int main()
   int *n = NULL;
   int i = 0;
 
-  for( i = 0; i < 20; i++ )
+  for( i = 0; i < 4; i++ )
   {
     p[i] = i;
     printf("p[%ld] = %ld\n", i, p[i]);
