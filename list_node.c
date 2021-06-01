@@ -31,12 +31,14 @@ list_single *create_list_node( int data )
 //链表的尾插
 void tail_insert( list_single *pH, list_single *new )
 {
-  list_single *p = pH;                                   //获取当前位置
+  list_single *p = NULL;
+  p = pH;                                                //获取当前位置
   while ( NULL != p->next )                              //如果当前位置的下一个节点不为空
   {
     p = p->next;                                         //移动到下一个节点
   }
   p->next = new;                                         //如果跳出以上循环，所以已经到了NULL的这个位置，此时直接把新插入的节点赋值给NULL这个位置
+  new->next = NULL;
 }
 
 //链表的头插
