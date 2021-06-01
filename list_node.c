@@ -131,9 +131,10 @@ int main()
 #endif
 #if 1      //链表实验
   int i;
-  list_single *header = create_list_node(1);
+  list_single *header = NULL; 
+  header = create_list_node(0);
   printf("data = %d\n", header->data);
-  header = create_list_node(2);
+  header = create_list_node(1);
   printf("data = %d\n", header->data);
   
   // for ( i = 1; i < 10; i++)
