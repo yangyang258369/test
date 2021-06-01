@@ -132,7 +132,7 @@ int main()
 #if 1      //链表实验
   int i;
   list_single *header = create_list_node(0);
-  for ( i = 0; i < 10; i++)
+  for ( i = 1; i < 10; i++)
   {
     tail_insert(header, create_list_node(i));    
   }
