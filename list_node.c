@@ -131,12 +131,16 @@ int main()
 #endif
 #if 1      //链表实验
   int i;
-  list_single *header = create_list_node(0);
-  for ( i = 1; i < 10; i++)
-  {
-    tail_insert(header, create_list_node(i));
-    printf("data[%d] = %d\n", i, header->data);
-  }
+  list_single *header = create_list_node(1);
+  printf("data = %d\n", header->data);
+  list_single *header = create_list_node(2);
+  printf("data = %d\n", header->data);
+  
+  // for ( i = 1; i < 10; i++)
+  // {
+  //   tail_insert(header, create_list_node(i));
+  //   printf("data[%d] = %d\n", i, header->data);
+  // }
   
 //  print_node(header);
 //  delete_list_node(header, 5);
