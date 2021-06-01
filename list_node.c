@@ -37,8 +37,9 @@ void tail_insert( list_single *pH, list_single *new )
   {
     p = p->next;                                         //移动到下一个节点
   }
+  new->next = p->next;
   p->next = new;                                         //如果跳出以上循环，所以已经到了NULL的这个位置，此时直接把新插入的节点赋值给NULL这个位置
-  new->next = NULL;
+  //new->next = NULL;
 }
 
 //链表的头插
