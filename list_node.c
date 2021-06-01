@@ -33,8 +33,12 @@ void tail_insert( list_single *pH, list_single *new )
 {
   list_single *p = NULL;
   p = pH;                                                //获取当前位置
+
+  printf("new->data = %d\n", new->data);
+
   while ( NULL != p->next )                              //如果当前位置的下一个节点不为空
   {
+    printf("p->next = NULL\n");
     p = p->next;                                         //移动到下一个节点
   }
   new->next = p->next;
