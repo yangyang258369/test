@@ -157,7 +157,17 @@ void trave_list( list_single *pH )
   top_insert(pH, p);                                    //插入最后一个节点
 }
 
+void destory_list( list_single *pH )
+{
+  list_single *p = pH;
 
+  while( NULL != p->next )
+  {
+    p = p->next;
+    free(p);
+  }
+  free(p);
+}
 
 int main()
 {
@@ -203,7 +213,9 @@ int main()
   }
   print_node(header);
   putchar('\n');
-
+  destory_list(header);
+  print_node(header);
+  putchar('\n');
   //trave_list(header);
   //print_node(header);
 #endif
