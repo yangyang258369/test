@@ -143,7 +143,8 @@ int main()
   printf("data = %d\n", header->data);
   tail_insert(header, create_list_node(1));
   printf("data = %d\n", header->next->data);
-
+  tail_insert(header, create_list_node(2));
+  printf("data = %d\n", header->next->next->data);
   
   // for ( i = 1; i < 10; i++)
   // {
