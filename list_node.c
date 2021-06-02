@@ -197,9 +197,8 @@ int main()
   putchar('\n');
   print_node(header);
   putchar('\n');
-//  trave_list(header);
-//  print_node(header);
-
+  trave_list(header);
+  print_node(header);
 #endif
 
   return 0;
