@@ -151,11 +151,12 @@ int main()
     tail_insert(header, create_list_node(i));
   }
   
+  putchar('\n');
   print_node(header);
   delete_list_node(header, 5);
-//  putchar('\n');
-//  print_node(header);
-//  putchar('\n');
+  putchar('\n');
+  print_node(header);
+  putchar('\n');
 //  trave_list(header);
 //  print_node(header);
 
