@@ -157,6 +157,8 @@ void trave_list( list_single *pH )
   top_insert(pH, p);                                    //插入最后一个节点
 }
 
+
+
 int main()
 {
 #if 0      //链表创建单节点  
@@ -180,25 +182,29 @@ int main()
   // tail_insert(header, create_list_node(3));
   // printf("data = %d\n", header->next->next->next->data);
 
-  for ( i = 1; i < 10; i++)
+  for ( i = 10; i > 0; i--)
   {
-    tail_insert(header, create_list_node(i));
+    top_insert(header, create_list_node(i));       //头部添加节点
   }
   
   putchar('\n');
-  delete_list_node(header, 20);
-  putchar('\n');
-  print_node(header);
-  delete_list_node(header, 5);
-  putchar('\n');
+  delete_list_node(header, 20);                    //删除选定节点
   print_node(header);
   putchar('\n');
-  mid_insert(header, create_list_node(5), 4 );
-  putchar('\n');
+  delete_list_node(header, 5);                     //删除选定节点
   print_node(header);
   putchar('\n');
-  trave_list(header);
+  mid_insert(header, create_list_node(5), 4 );     //中间添加节点
   print_node(header);
+  putchar('\n');
+
+  for ( i = 10; i < 20; i++)
+  {
+    tail_insert(header, create_list_node(i));     //尾部添加节点
+  }
+
+  //trave_list(header);
+  //print_node(header);
 #endif
 
   return 0;
