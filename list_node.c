@@ -163,10 +163,11 @@ void destory_list( list_single *pH )
 
   while( NULL != p->next )
   {
+    printf("p->next[%d] != NULL\n", p->data);
     p = p->next;
     free(p);
   }
-  free(p);
+  //free(p);
 }
 
 int main()
