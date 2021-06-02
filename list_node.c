@@ -186,6 +186,8 @@ int main()
   }
   
   putchar('\n');
+  delete_list_node(header, 20);
+  putchar('\n');
   print_node(header);
   delete_list_node(header, 5);
   putchar('\n');
