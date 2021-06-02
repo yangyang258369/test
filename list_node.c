@@ -36,7 +36,7 @@ void tail_insert( list_single *pH, list_single *new )
 
   while ( NULL != p->next )                              //如果当前位置的下一个节点不为空
   {
-    printf("p->next[%d] != NULL\n", p->data);
+    //printf("p->next[%d] != NULL\n", p->data);
     p = p->next;                                         //移动到下一个节点
   }
   new->next = p->next;
@@ -55,6 +55,7 @@ void top_insert( list_single *pH, list_single *new)
 //链表的中间插
 void mid_insert( list_single *pH, list_single *new, int data)
 {
+  unsigned char cFlag = 1;
   list_single *p = pH;                                   //获取当前位置
   list_single *prev = NULL;
 
@@ -65,14 +66,17 @@ void mid_insert( list_single *pH, list_single *new, int data)
 
     if ( p->data == data )
     {
+      cFlag = 0;
       new->next = p->next;                                   //此时把前一节点的数据赋值给新插入的节点
       p->next = new;                                         //把新插入的节点赋值给前一节点的指针
     }
-    else
-    {
-      printf("没有要添加的节点\n");
-    }
   }
+
+  if( cFlag )
+  {
+    printf("没有要添加的节点\n");
+  }
+
 }
 
 //链表的遍历
@@ -91,6 +95,7 @@ void print_node( list_single *pH )
 //删除链表中的节点
 int delete_list_node( list_single *pH, int data )
 {
+  unsigned char cFlag = 1;
   list_single *p = pH;                                   //获取当前位置
   list_single *prev = NULL;
   while( NULL != p->next )
@@ -99,6 +104,7 @@ int delete_list_node( list_single *pH, int data )
     p = p->next;                                         //然后让当前的指针继续往后移动
     if( p->data == data )
     {
+      cFlag = 0;
       //两种情况，一种为普通节点，还有一种是尾节点
       if( p->next != NULL )                              //普通节点
       {
@@ -111,11 +117,13 @@ int delete_list_node( list_single *pH, int data )
         free(p);
       }
     }
-    else
-    {
-        printf("没有要删除的节点\n");
-    }
   }
+
+  if( cFlag )
+  {
+    printf("没有要删除的节点\n");
+  }
+
   return -1;
 }
 
