@@ -182,11 +182,11 @@ int main()
   // tail_insert(header, create_list_node(3));
   // printf("data = %d\n", header->next->next->next->data);
 
-  for ( i = 10; i > 0; i--)
+  for ( i = 9; i > 0; i--)
   {
     top_insert(header, create_list_node(i));       //头部添加节点
   }
-  
+  print_node(header);
   putchar('\n');
   delete_list_node(header, 20);                    //删除选定节点
   print_node(header);
@@ -197,11 +197,12 @@ int main()
   mid_insert(header, create_list_node(5), 4 );     //中间添加节点
   print_node(header);
   putchar('\n');
-
   for ( i = 10; i < 20; i++)
   {
     tail_insert(header, create_list_node(i));     //尾部添加节点
   }
+  print_node(header);
+  putchar('\n');
 
   //trave_list(header);
   //print_node(header);
