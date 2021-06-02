@@ -63,7 +63,7 @@ void print_node( list_single *pH )
     p = p->next;                                         //移动到下一节点，如果条件仍为真，则重复(1)，再(2)
   }
   printf("data:%d\n", p->data);                          //如果当前节点位置的下一个节点为NULL，则打印数据 说明只有一个节点
-} 
+}
 
 //删除链表中的节点
 int delete_list_node( list_single *pH, int data )
@@ -152,8 +152,8 @@ int main()
   //   printf("data[%d] = %d\n", i, header->data);
   // }
   
-//  print_node(header);
-//  delete_list_node(header, 5);
+  print_node(header);
+  delete_list_node(header, 5);
 //  putchar('\n');
 //  print_node(header);
 //  putchar('\n');
