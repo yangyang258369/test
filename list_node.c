@@ -141,16 +141,18 @@ int main()
   list_single *header = NULL; 
   header = create_list_node(0);
   printf("data = %d\n", header->data);
-  // tail_insert(header, create_list_node(1));
-  // printf("data = %d\n", header->next->data);
-  // tail_insert(header, create_list_node(2));
-  // printf("data = %d\n", header->next->next->data);
-  
-  for ( i = 1; i < 10; i++)
-  {
-    tail_insert(header, create_list_node(i));
-    printf("data[%d] = %d\n", i, header->data);
-  }
+  tail_insert(header, create_list_node(1));
+  printf("data = %d\n", header->next->data);
+  tail_insert(header, create_list_node(2));
+  printf("data = %d\n", header->next->next->data);
+  tail_insert(header, create_list_node(3));
+  printf("data = %d\n", header->next->next->next->data);
+
+  // for ( i = 1; i < 10; i++)
+  // {
+  //   tail_insert(header, create_list_node(i));
+  //   printf("data[%d] = %d\n", i, header->data);
+  // }
   
 //  print_node(header);
 //  delete_list_node(header, 5);
