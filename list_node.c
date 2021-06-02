@@ -52,6 +52,29 @@ void top_insert( list_single *pH, list_single *new)
   p->next = new;                                         //把新插入的节点赋值给前一节点的指针
 }
 
+//链表的中间插
+void mid_insert( list_single *pH, list_single *new, int data)
+{
+  list_single *p = pH;                                   //获取当前位置
+  list_single *prev = NULL;
+
+  while( NULL != p->next )
+  {
+    prev = p;
+    p = p->next;
+
+    if ( p->data == data )
+    {
+      new->next = p->next;                                   //此时把前一节点的数据赋值给新插入的节点
+      p->next = new;                                         //把新插入的节点赋值给前一节点的指针
+    }
+    else
+    {
+      printf("没有要添加的节点\n");
+    }
+  }
+}
+
 //链表的遍历
 void print_node( list_single *pH )
 {
@@ -88,8 +111,11 @@ int delete_list_node( list_single *pH, int data )
         free(p);
       }
     }
+    else
+    {
+        printf("没有要删除的节点\n");
+    }
   }
-  printf("没有要删除的节点\n");
   return -1;
 }
 
@@ -154,6 +180,10 @@ int main()
   putchar('\n');
   print_node(header);
   delete_list_node(header, 5);
+  putchar('\n');
+  print_node(header);
+  putchar('\n');
+  mid_insert(header, create_list_node(5), 4 );
   putchar('\n');
   print_node(header);
   putchar('\n');
